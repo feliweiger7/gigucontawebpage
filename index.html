@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Telefone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Telefone</h1>
+        <form id="phoneForm">
+            <div class="form-group">
+                <label for="phone">Número de Telefone</label>
+                <div class="phone-input">
+                    <span class="country-code">+55</span>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="(11) 99999-9999"
+                        maxlength="15"
+                        required
+                    >
+                </div>
+                <small class="hint">Digite o DDD + número (ex: 11999999999)</small>
+            </div>
+            <button type="submit" id="submitBtn">Enviar</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script>
+        // Carrega config.js se existir (desenvolvimento local), senão usa config.production.js
+        const script = document.createElement('script');
+        script.src = 'config.js';
+        script.onerror = () => {
+            const prodScript = document.createElement('script');
+            prodScript.src = 'config.production.js';
+            document.head.appendChild(prodScript);
+        };
+        document.head.appendChild(script);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

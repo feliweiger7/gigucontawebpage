@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores da marca Gigu */
+:root {
+    --gigu-azul-escuro: #132A4C;
+    --gigu-laranja: #ff7a00;
+    --gigu-laranja-claro: #fff3e6;
+    --gigu-verde: #25d366;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--gigu-azul-escuro);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    border-top: 6px solid var(--gigu-laranja);
+}
+
+h1 {
+    text-align: center;
+    color: var(--gigu-azul-escuro);
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gigu-azul-escuro);
+    font-weight: 500;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.phone-input:focus-within {
+    border-color: var(--gigu-laranja);
+}
+
+.country-code {
+    background: var(--gigu-laranja-claro);
+    padding: 12px 16px;
+    color: var(--gigu-azul-escuro);
+    font-weight: 600;
+    border-right: 2px solid #e0e0e0;
+}
+
+input[type="tel"] {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="tel"]::placeholder {
+    color: #aaa;
+}
+
+.hint {
+    display: block;
+    margin-top: 6px;
+    color: #888;
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: var(--gigu-laranja);
+    color: var(--gigu-azul-escuro);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 122, 0, 0.4);
+    background: #e56d00;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    display: none;
+}
+
+.message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid var(--gigu-verde);
+}
+
+.message.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.loading {
+    display: block;
+    background: var(--gigu-laranja-claro);
+    color: var(--gigu-azul-escuro);
+    border: 1px solid var(--gigu-laranja);
+}

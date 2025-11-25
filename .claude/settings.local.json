@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start \"\" \"C:\\Users\\Felipe Weiger\\OneDrive\\Cursor projects\\09 - Webpage de cadastro gigu conta\\index.html\")",
+      "Bash(npx:*)",
+      "Bash(timeout:*)",
+      "Bash(exit 0)",
+      "Bash(curl:*)",
+      "Bash(python -m http.server:*)",
+      "Bash(node proxy-server.js:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

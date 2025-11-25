@@ -1,0 +1,12 @@
+# Arquivo de configuração com credenciais
+config.js
+
+# Dependências
+node_modules/
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
