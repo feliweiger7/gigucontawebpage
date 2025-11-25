@@ -1,7 +1,6 @@
 // Configuração para produção (Vercel)
-// Este arquivo será commitado no git
+// Este arquivo não é mais necessário - CONFIG está inline no index.html
+// Mantido apenas para compatibilidade
 const CONFIG = {
-    API_ENDPOINT: '/api/pre-registration',
-    AUTH_USERNAME: '', // Não usado no frontend, apenas no serverless
-    AUTH_PASSWORD: ''  // Não usado no frontend, apenas no serverless
+    API_ENDPOINT: '/api/pre-registration'
 };

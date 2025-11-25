@@ -9,7 +9,14 @@
       "Bash(python -m http.server:*)",
       "Bash(node proxy-server.js:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Sistema de cadastro de telefone Gigu Conta\n\n- Interface web responsiva com validação de telefone brasileiro\n- API serverless para Vercel\n- Proxy local para desenvolvimento\n- Configuração separada para dev e produção\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git remote:*)",
+      "Bash(gh auth:*)",
+      "Bash(git config:*)"
     ],
     "deny": [],
     "ask": []

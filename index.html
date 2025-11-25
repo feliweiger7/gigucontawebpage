@@ -30,15 +30,10 @@
         <div id="message" class="message"></div>
     </div>
     <script>
-        // Carrega config.js se existir (desenvolvimento local), senão usa config.production.js
-        const script = document.createElement('script');
-        script.src = 'config.js';
-        script.onerror = () => {
-            const prodScript = document.createElement('script');
-            prodScript.src = 'config.production.js';
-            document.head.appendChild(prodScript);
+        // Configuração inline para garantir que CONFIG está sempre disponível
+        const CONFIG = {
+            API_ENDPOINT: '/api/pre-registration'
         };
-        document.head.appendChild(script);
     </script>
     <script src="script.js"></script>
 </body>

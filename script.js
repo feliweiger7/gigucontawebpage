@@ -1,6 +1,3 @@
-// Usa configurações do config.js
-const AUTH_HEADER = 'Basic ' + btoa(CONFIG.AUTH_USERNAME + ':' + CONFIG.AUTH_PASSWORD);
-
 // Elementos do DOM
 const phoneForm = document.getElementById('phoneForm');
 const phoneInput = document.getElementById('phone');
@@ -94,8 +91,7 @@ phoneForm.addEventListener('submit', async function(e) {
         const response = await fetch(CONFIG.API_ENDPOINT, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': AUTH_HEADER
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(payload)
         });
