@@ -9,24 +9,61 @@
 <body>
     <div class="container">
         <h1>Cadastro de Telefone</h1>
-        <form id="phoneForm">
-            <div class="form-group">
-                <label for="phone">Número de Telefone</label>
-                <div class="phone-input">
-                    <span class="country-code">+55</span>
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="(11) 99999-9999"
-                        maxlength="15"
-                        required
-                    >
+
+        <!-- Tabs para alternar entre modos -->
+        <div class="tabs">
+            <button class="tab active" data-tab="single">Único</button>
+            <button class="tab" data-tab="csv">Upload CSV</button>
+        </div>
+
+        <!-- Modo: Telefone único -->
+        <div id="singleTab" class="tab-content active">
+            <form id="phoneForm">
+                <div class="form-group">
+                    <label for="phone">Número de Telefone</label>
+                    <div class="phone-input">
+                        <span class="country-code">+55</span>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="(11) 99999-9999"
+                            maxlength="15"
+                            required
+                        >
+                    </div>
+                    <small class="hint">Digite o DDD + número (ex: 11999999999)</small>
                 </div>
-                <small class="hint">Digite o DDD + número (ex: 11999999999)</small>
+                <button type="submit" id="submitBtn">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Modo: Upload CSV -->
+        <div id="csvTab" class="tab-content">
+            <form id="csvForm">
+                <div class="form-group">
+                    <label for="csvFile">Arquivo CSV</label>
+                    <div class="file-upload">
+                        <input type="file" id="csvFile" accept=".csv,.txt" required>
+                        <label for="csvFile" class="file-label">
+                            <span class="file-icon">📁</span>
+                            <span class="file-text">Clique para selecionar arquivo</span>
+                        </label>
+                        <span id="fileName" class="file-name"></span>
+                    </div>
+                    <small class="hint">CSV com uma coluna de telefones (um por linha)</small>
+                </div>
+                <div id="csvPreview" class="csv-preview"></div>
+                <button type="submit" id="csvSubmitBtn">Enviar Todos</button>
+            </form>
+            <div id="csvProgress" class="progress-container" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span id="progressText" class="progress-text">0/0</span>
             </div>
-            <button type="submit" id="submitBtn">Enviar</button>
-        </form>
+        </div>
+
         <div id="message" class="message"></div>
     </div>
     <script>
